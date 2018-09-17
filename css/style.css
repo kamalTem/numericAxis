@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, "sans-serif";
+}
+.numbersField{
+  background-color: white;
+}
+.normal{
+  background-color: #fff;
+}
+span.error {
+    background-color: #F3AA4B;
+}
+input.error{
+  color: #D80016;
+}
+.numbersField{
+	margin: 0 auto;
+    margin-top: 180px;
+    margin-bottom: 100px;
+    width: 550px;
+    height: 110px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+}
+.input-answer{
+	margin-top: -10px;
+    width: 75px;
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+}
+.input-fields input{
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+}
+.input-first{
+	margin-left: 132px;
+}
+.input-second{
+	margin-left: 180px;
+}
+.img{
+	display: block;
+    margin: 0 auto;
+    margin-top: -58px;
+    width: 875px;
+    height: 83px;
+}
+.canvas-body{
+	position: relative;
+  	margin: 0 auto;
+	width: 855px;
+}
+#cnvs {
+  display: block;
+  margin-left: 26px;
+  margin-top: 30px;
+  margin-bottom: 4px;
+  width: 850px;
+  height:85px;
+}

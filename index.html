@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test uchi.ru</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+	<div class="numbersField">
+		<span class="first-number"></span>
+		+
+		<span class="second-number"></span>
+		=
+		<span id="answer">?</span>
+		<input type="hidden" class="input-answer">
+	</div>
+
+  <div class="canvas-body">
+  	<div class="input-fields">
+		<input type="text" class="input-first">
+		<input type="hidden" class="input-second">
+	</div>
+
+    <canvas id="cnvs" width="850px" height="85px"></canvas>
+  </div>
+  
+  <img class="img" src="img/sprite.png" alt="rule" width="875" height="83">
+</body>
+</html>
