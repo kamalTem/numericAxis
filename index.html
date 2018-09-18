@@ -15,13 +15,13 @@
 		<span class="second-number"></span>
 		=
 		<span id="answer">?</span>
-		<input type="hidden" class="input-answer">
+		<input type="hidden" class="input-answer" oninput="answerFunct()"  maxlength="2">
 	</div>
 
   <div class="canvas-body">
   	<div class="input-fields">
-		<input type="text" class="input-first">
-		<input type="hidden" class="input-second">
+		<input type="text" class="input-first" oninput="firstInput()" maxlength="1">
+		<input type="hidden" class="input-second" oninput="secondInput()" maxlength="1">
 	</div>
 
     <canvas id="cnvs" width="850px" height="85px"></canvas>
