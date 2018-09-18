@@ -10,60 +10,46 @@ function getRandomInt(min, max) {
 $('.first-number').html(firstNumber);
 $('.second-number').html(secondNumber);
 
-
 //first инпут
- $('.input-first').click(function () {
-        $('.input-first').on('keyup',function(e){
-    console.log(e,this);
-    if ($(this).val() != firstNumber){//сравнение введеного числа в инпут с числом из спана
-        $(".first-number").addClass('error');
+function firstInput(){
+    if ($(".input-first").val() != firstNumber){//сравнение введеного числа в инпут с числом из спана
+         $(".first-number").addClass('error');
         $( ".input-first" ).css( "color", "red" ); 
     } 
     else {
-        $(".first-number").removeClass('error');
+       $(".first-number").removeClass('error');
         $( ".input-first" ).css( "color", "black").css("border","none").css("background-color","transparent");
         $(".input-first").prop('disabled',true);//что бы менять больше нельзя было и поле ввода пропало
         $('.input-second').each (function() { this.type = 'text'; });   //тут меняем с типа хиден на тип текст и поле появляется   
         secondArrow();//вызов функции создания второй дуги(она ниже создается)
     }
-})
-    $('input').keyup();      
-});
- 
+}
 
 //второй инпут
-$('.input-second').click(function () {
-        $('.input-second').on('keyup',function(e){
-    console.log(e,this);
-     if ($(this).val() != secondNumber){
-    	$(".second-number").addClass('error');
-    	$( ".input-second" ).css( "color", "red" ); 
+function secondInput(){
+ if ($(".input-second").val() != secondNumber){
+        $(".second-number").addClass('error');
+        $( ".input-second" ).css( "color", "red" ); 
     } 
     else {
-    	$(".second-number").removeClass('error');
-    	$( ".input-second" ).css( "color", "black").css("border","none").css("background-color","transparent");
-    	$(".input-second").prop('disabled',true);
-    	$('.input-answer').each (function() { this.type = 'text'; });
-    	$("#answer").html("");  
+        $(".second-number").removeClass('error');
+        $( ".input-second" ).css( "color", "black").css("border","none").css("background-color","transparent");
+        $(".input-second").prop('disabled',true);
+        $('.input-answer').each (function() { this.type = 'text'; });
+        $("#answer").html("");  
     }
-})
-    $('input').keyup();
-});
-
+}
 
 //третий инпут
-$('.input-answer').on('keyup',function(e){
-    console.log(e,this);
-     if ($(this).val() != answer){
-    	$( ".input-answer" ).css( "color", "red" ); 
+function answerFunct(){
+ if ($(".input-answer").val() != answer){
+        $( ".input-answer" ).css( "color", "red" );  
     } 
     else {
-    	$( ".input-answer" ).css( "color", "black").css("border","none").css("background-color","transparent");
-    	$(".input-answer").prop('disabled',true);
+      $( ".input-answer" ).css( "color", "black").css("border","none").css("background-color","transparent");
+        $(".input-answer").prop('disabled',true);
     }
-})
-$('input').keyup();
-
+}
 
 //canvas
 var canvas = document.getElementById('cnvs');
@@ -112,3 +98,4 @@ function secondArrow(){
 	ctx.lineTo(endSecondArrow - 2, 37);
 	ctx.stroke();
 }
+
